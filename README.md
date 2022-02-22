@@ -13,16 +13,21 @@
 ```bash
 mkdir ~/project_ccc
 cd ~/project_ccc/
-git clone https://github.com/SaraPettinari/sim_project.git
-mv -v sim_project src
-cd ~/project_ccc/
-rosdep install --from-paths src --ignore-src -r -y
+git clone https://github.com/AntonioGassner/src.git
+rosdep install --from-paths src --ignore-src -r -y rosdistro=foxy
 colcon build
-source install/setup.bash
 
+sudo nano ~/.bashrc
 
-echo 'source ~/project_ccc/install/setup.bash' >> ~/.bashrc 
-```
+##scrivere sta roba dentro a .bashrc
+
+export SVGA_VGPU10=0 
+source /usr/share/colcon_cd/function/colcon_cd.sh
+export _colcon_cd_root=~/ros2_install
+alias python='python3.9' # Cambialo in base alla tua versione di Python
+export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-11
+source DIRECTORY DEL PACCHETTO DI SIMULAZIONE (dovresti già averlo)
+source ~/project_ccc/install/setup.bash
 
 ### RUN simulazione
 (se sono state apportate modifiche ai file)

@@ -15,10 +15,11 @@ def generate_launch_description():
 
     return LaunchDescription([
         ExecuteProcess(cmd=[
-            'gzserver',  # put gazebo if you want the gui / gzserver otherwise
+            'gazebo',  # put gazebo if you want the gui / gzserver otherwise
             '--verbose',
             '-s', 'libgazebo_ros_init.so',  # publish /clock
             '-s', 'libgazebo_ros_factory.so',  # provide gazebo_ros::Node
+            '-r', '--record_path', '/home/robomaker/my_logs',
             world_path
         ], output='screen'),
 

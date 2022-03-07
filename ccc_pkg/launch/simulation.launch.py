@@ -15,7 +15,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         ExecuteProcess(cmd=[
-            'gazebo',  # put gazebo if you want the gui / gzserver otherwise
+            'gzserver',  # put gazebo if you want the gui / gzserver otherwise
             '--verbose',
             '-s', 'libgazebo_ros_init.so',  # publish /clock
             '-s', 'libgazebo_ros_factory.so',  # provide gazebo_ros::Node

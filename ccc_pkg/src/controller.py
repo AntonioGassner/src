@@ -41,7 +41,10 @@ class Controller(Node):
     # send client request to reset the simulation
     def reset_simulation(self):
         self.future = self.cli.call_async(self.req)
-        os.system("pkill -9 gazebo & pkill -9 gzserver  & pkill -9 gzclient & pkill -9 python3")
+        os.system("pkill -9 gazebo")
+        os.system("pkill -9 gzserver")
+        os.system("pkill -9 gzclient")
+        os.system("pkill -9 python3")
 
     # publish on Velocity topic
     def velocity_callback(self):

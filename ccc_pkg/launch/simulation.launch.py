@@ -19,7 +19,7 @@ def generate_launch_description():
             '--verbose',
             '-s', 'libgazebo_ros_init.so',  # publish /clock
             '-s', 'libgazebo_ros_factory.so',  # provide gazebo_ros::Node
-            '-r', 'empty.world', '--record_path', '/home/robomaker/my_logs',
+            '-r', '--record_path', '/home/robomaker/my_logs', 'empty.world', 
             world_path
         ], output='screen'),
 

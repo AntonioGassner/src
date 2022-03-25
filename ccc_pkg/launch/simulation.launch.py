@@ -19,6 +19,7 @@ def generate_launch_description():
             '--verbose',
             '-s', 'libgazebo_ros_init.so',  # publish /clock
             '-s', 'libgazebo_ros_factory.so',  # provide gazebo_ros::Node
+            # the fillowing line tells gazebo to activate logging and specifies the directory used
             '-r worlds/empty.world', '--record_path', '/home/robomaker/my_logs',
             world_path
         ], output='screen'),
